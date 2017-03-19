@@ -1,5 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.js';
+import test from './test.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+test(1, 1)
+	.then(() => {return test(1, 8);})
+	.then(() => {return test(1, 16);})
+	.then(() => {return test(1, 32);})
+	.then(() => {return test(1, 64);})
+	.then(() => {return test(8, 8);})
+	.then(() => {return test(8, 16);})
+	.then(() => {return test(8, 32);})
+	.then(() => {return test(8, 64);})
+	.then(() => {return test(16, 8);})
+	.then(() => {return test(16, 16);})
+	.then(() => {return test(16, 32);})
+	.then(() => {return test(16, 64);})
+	.then(() => {return test(32, 8);})
+	.then(() => {return test(32, 16);})
+	.then(() => {return test(32, 32);})
+	.then(() => {return test(32, 64);})
+;
